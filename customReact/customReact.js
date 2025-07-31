@@ -1,26 +1,30 @@
-
 function customRender(reactElement, container){
+    
+    
     const domElement = document.createElement(reactElement.type)
-    domElement.innerHTML= reactElement.children
-    domElement.setAttribute("href", reactElement.props.href)
-    domElement.setAttribute("href", reactElement.props.target)
+    domElement.innerHTML = reactElement.children
+    domElement.setAttribute('href', reactElement.props.href)
+    domElement.setAttribute('target', reactElement.props.target)
     container.appendChild(domElement)
+
 }
+
 
 
 
 const reactElement = {
-    type: "a",
+    type: 'a',
     props: {
-        href: "https://google.com",
-        target: "_blank"
+        href: 'https://google.com',
+        target: '_blank'
     },
-    children: "click here to visit to google"
+    children: 'Click me to visit google'
 }
 
 
 
 
-const mainContainer = document.getElementById("#root")
+
+const mainContainer = document.querySelector('#root')
 
 customRender(reactElement, mainContainer)
