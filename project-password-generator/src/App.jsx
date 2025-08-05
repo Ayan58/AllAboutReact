@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect, useRef } from 'react'
 
 function App() {
   const [length, setLength] = useState(10)
-  const [number, setNumber] = useState(false);
+  const [number, setNumber] = useState(false)
   const [char, setChar] = useState(false)
   const [password, setPassword] = useState("")
 
@@ -17,10 +17,8 @@ function App() {
     for (let i = 1; i <= length; i++) {
       let char_index = Math.floor(Math.random() * str.length + 1)
       pass += str.charAt(char_index)
-      
-    }
+      }
     setPassword(pass)
-
   }, [length, number, char, setPassword])
 
   const copyPasswordToClipboard = useCallback(() => {
@@ -33,7 +31,7 @@ function App() {
   }, [length, number, char, passwordGenerator])
   return (
     <div className="w-fit max-w-md mx-auto shadow-md rounded-3xl px-8 py-6 my-28 bg-cyan-800 text-black-500">
-      <h1 className='text-white text-center my-3'>Password generator</h1>
+      <h1 className='text-white text-center my-3'>Password Generator</h1>
     <div className="flex shadow rounded-lg overflow-hidden mb-4">
         <input
             type="text"
